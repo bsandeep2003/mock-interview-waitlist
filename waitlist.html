@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Mock Interview – Early Access Waitlist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#0f172a;color:#fff;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:40px 20px}
+.container{width:100%;max-width:760px;background:#111827;border:1px solid #1f2937;border-radius:24px;padding:44px;box-shadow:0 20px 48px rgba(0,0,0,0.3)}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#1e293b;color:#60a5fa;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:20px}
+h1{font-size:38px;line-height:1.2;font-weight:700;margin-bottom:14px}
+.subtitle{color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:26px}
+.offer{display:flex;gap:14px;align-items:flex-start;background:rgba(37,99,235,0.10);border:1px solid rgba(96,165,250,0.25);border-radius:14px;padding:18px 20px;margin-bottom:32px}
+.offer-icon{font-size:22px;flex-shrink:0;margin-top:1px}
+.offer p{color:#dbeafe;font-size:14px;line-height:1.7}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.full{grid-column:1/-1}
+label{display:block;font-size:13px;color:#94a3b8;margin-bottom:6px;font-weight:500}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#f1f5f9;font-size:14px;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#3b82f6}
+select option{background:#1e293b}
+textarea{min-height:100px;resize:vertical}
+.chips-label{font-size:13px;color:#94a3b8;font-weight:500;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;border:1px solid #334155;background:transparent;color:#94a3b8;font-size:13px;cursor:pointer;transition:.15s;user-select:none}
+.chip:hover{border-color:#64748b;color:#e2e8f0}
+.chip.active{background:rgba(37,99,235,0.15);border-color:#3b82f6;color:#93c5fd}
+.divider{height:1px;background:#1f2937;margin:8px 0}
+.submit-btn{width:100%;padding:14px;border-radius:12px;background:#2563eb;border:none;color:#fff;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s;margin-top:4px}
+.submit-btn:hover{background:#1d4ed8;transform:translateY(-1px)}
+.submit-btn:active{transform:translateY(0)}
+.submit-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.error-msg{color:#f87171;font-size:13px;text-align:center;margin-top:8px}
+.success-wrap{text-align:center;padding:32px 20px}
+.success-icon{font-size:52px;margin-bottom:16px}
+.success-wrap h2{font-size:24px;font-weight:700;margin-bottom:10px}
+.success-wrap p{color:#94a3b8;font-size:15px;line-height:1.7}
+.footer{text-align:center;color:#475569;font-size:13px;margin-top:20px;display:flex;align-items:center;justify-content:center;gap:5px}
+@media(max-width:600px){
+  .container{padding:28px 24px}
+  h1{font-size:28px}
+  .form-grid{grid-template-columns:1fr}
+  .full{grid-column:1}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="badge">⚡ Early Access Waitlist</div>
+  <h1>Practice interviews.<br>Get real feedback.<br>Get hired.</h1>
+  <p class="subtitle">AI-powered mock interviews tailored to your role — technical, behavioural, and communication rounds with detailed, actionable feedback.</p>
+
+  <div class="offer">
+    <div class="offer-icon">🎁</div>
+    <p><strong>Limited beta spots:</strong> The first <strong>10 people</strong> on the waitlist get <strong>free access to all beta features</strong> and a direct line to shape the product.</p>
+  </div>
+
+  <!-- FORM -->
+  <div id="formArea">
+    <div class="form-grid">
+
+      <div>
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="Sandeep Raj" required>
+      </div>
+
+      <div>
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="you@email.com" required>
+      </div>
+
+      <div>
+        <label for="experience">Experience level</label>
+        <select id="experience">
+          <option value="">Select level</option>
+          <option>Student</option>
+          <option>Fresher</option>
+          <option>1–3 years</option>
+          <option>3–5 years</option>
+          <option>5+ years</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="role">Target role</label>
+        <select id="role">
+          <option value="">Select role</option>
+          <option>Frontend developer</option>
+          <option>Backend developer</option>
+          <option>Full stack developer</option>
+          <option>AI / ML engineer</option>
+          <option>Data analyst</option>
+          <option>Data scientist</option>
+          <option>DevOps engineer</option>
+          <option>Product manager</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="full">
+        <div class="divider" style="margin-bottom:16px"></div>
+        <p class="chips-label">What worries you most about interviews? <span style="color:#475569;font-weight:400">(pick all that apply)</span></p>
+        <div class="chips" id="chips">
+          <div class="chip" data-val="Unexpected questions" onclick="this.classList.toggle('active')">❓ Unexpected questions</div>
+          <div class="chip" data-val="DSA / coding rounds" onclick="this.classList.toggle('active')">💻 DSA / coding rounds</div>
+          <div class="chip" data-val="System design" onclick="this.classList.toggle('active')">🏗️ System design</div>
+          <div class="chip" data-val="Behavioural questions" onclick="this.classList.toggle('active')">🧠 Behavioural questions</div>
+          <div class="chip" data-val="Communication skills" onclick="this.classList.toggle('active')">💬 Communication skills</div>
+          <div class="chip" data-val="Freezing under pressure" onclick="this.classList.toggle('active')">😰 Freezing under pressure</div>
+          <div class="chip" data-val="Not knowing if answers are good" onclick="this.classList.toggle('active')">🤔 Not knowing if my answers are good</div>
+        </div>
+      </div>
+
+      <div class="full">
+        <div class="divider" style="margin:16px 0"></div>
+        <label for="improve">If you could improve one thing about your interview skills, what would it be?</label>
+        <textarea id="improve" placeholder="e.g. I tend to ramble when I'm nervous and lose track of what I was saying..."></textarea>
+      </div>
+
+      <div class="full">
+        <label for="beta">Open to giving us product feedback?</label>
+        <select id="beta">
+          <option value="">Select an option</option>
+          <option>Yes, happy to help</option>
+          <option>Maybe</option>
+          <option>Not right now</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="divider" style="margin:24px 0 20px"></div>
+
+    <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
+      Reserve my spot →
+    </button>
+    <div id="errorMsg" class="error-msg"></div>
+  </div>
+
+  <!-- SUCCESS STATE -->
+  <div id="successArea" class="success-wrap" style="display:none">
+    <div class="success-icon">🎉</div>
+    <h2>You're on the list!</h2>
+    <p>Check your inbox — we've sent you a confirmation email.<br>We'll be in touch as soon as beta access opens.</p>
+  </div>
+
+  <p class="footer">🔒 We respect your privacy and will never share your information.</p>
+
+</div>
+
+<script>
+
+// ── PASTE YOUR DEPLOYED APPS SCRIPT URL HERE ────────────────
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyr01ztJ3YrhRoDPaYhfwZETm_Nw-FaOtwoTB5G14NDBnXuR3Y-jj2QgRdkRMylKsuR/exec";
+// ────────────────────────────────────────────────────────────
+
+async function handleSubmit() {
+  const name  = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const errEl = document.getElementById("errorMsg");
+
+  errEl.textContent = "";
+
+  if (!name)  { errEl.textContent = "Please enter your name.";  return; }
+  if (!email) { errEl.textContent = "Please enter your email."; return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = "Please enter a valid email address.";
+    return;
+  }
+
+  const worries = [...document.querySelectorAll(".chip.active")]
+    .map(c => c.dataset.val).join(", ");
+
+  const payload = {
+    name,
+    email,
+    experience:  document.getElementById("experience").value,
+    role:        document.getElementById("role").value,
+    worries,
+    improvement: document.getElementById("improve").value,
+    beta:        document.getElementById("beta").value
+  };
+
+  const btn = document.getElementById("submitBtn");
+  btn.disabled  = true;
+  btn.textContent = "Submitting...";
+
+  try {
+    // Apps Script requires no-cors for cross-origin POST
+    await fetch(SCRIPT_URL, {
+      method:  "POST",
+      mode:    "no-cors",
+      headers: { "Content-Type": "text/plain" },
+      body:    JSON.stringify(payload)
+    });
+
+    document.getElementById("formArea").style.display    = "none";
+    document.getElementById("successArea").style.display = "block";
+
+  } catch (err) {
+    errEl.textContent = "Something went wrong. Please try again.";
+    btn.disabled      = false;
+    btn.textContent   = "Reserve my spot →";
+  }
+}
+</script>
+
+</body>
+</html>
